@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import { useDispatch} from 'react-redux'
 import { Header } from './components'
+import { Footer } from './components'
 import { AddPost, FullPost, Home, Login, Registration, HM } from './pages'
 import { fetchAuthMe} from './redux/slices/auth'
 
@@ -29,6 +30,7 @@ React.useEffect(() => {
           <Route path='/register' element={ <Registration/> }/>
         </Routes>
       </Container>
+      <Footer/>
     </>
   )
 }

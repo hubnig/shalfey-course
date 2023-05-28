@@ -1,6 +1,6 @@
 import React from 'react'
 import Quiz from 'react-quiz-component'
-
+import styles from './FullPost.module.scss'
 
 export const HM = () => {
   const quiz = {
@@ -105,6 +105,7 @@ export const HM = () => {
     ]
   }
   return (
-    <><Quiz quiz={quiz} /></>
+    <Quiz quiz={quiz} />
+    
   )
 }
