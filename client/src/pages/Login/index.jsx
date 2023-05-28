@@ -33,7 +33,7 @@ export const Login = () => {
   }
 
   if (isAuth) {
-    return <Navigate to='/' />
+    return <Navigate to='/home' />
   }
 
   return (

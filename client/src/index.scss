@@ -5,7 +5,16 @@ html, body, #root{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F5F5F5 !important;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 }
+
+
 #root{
   display: flex;
   flex-direction: column;
@@ -57,4 +66,8 @@ li{
     font-family: 'Roboto';
     margin: 0 auto;
   }
+}
+.MuiTextField-root{
+  width: 66%;
+  margin-bottom: 15px !important;
 }

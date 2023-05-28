@@ -1,3 +1,4 @@
+import { TextField } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import Tab from '@mui/material/Tab'
 import Tabs from '@mui/material/Tabs'
@@ -13,43 +14,58 @@ export const Home = () => {
   const dispatch = useDispatch()
   const { posts, tags } = useSelector((state) => state.posts)
   const userData = useSelector((state) => state.auth.data)
-
+  const [searchQuery, setSearchQuery] = React.useState('')
   const isPostsLoading = posts.satus === 'loading'
   const isTagsLoading = tags.satus === 'loading'
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value)
+    console.log(searchQuery)
+  }
 
   React.useEffect(() => {
     dispatch(fetchPosts())
     dispatch(fetchTags())
   }, [])
 
+  const filteredPosts = posts.items.filter((post) =>
+    post.title.toLowerCase().includes(searchQuery.toLowerCase())
+  )
 
   return (
     <>
-      <Tabs
+      {/* <Tabs
         style={{ marginBottom: 15 }}
         value={0}
         aria-label='basic tabs example'
       >
         <Tab label='Новые' />
         <Tab label='Популярные' />
-      </Tabs>
+      </Tabs> */}
+      <TextField
+        id='standard-basic'
+        label='Поиск курсов'
+        variant='standard'
+        value={searchQuery}
+        onChange={handleSearchChange}
+      />
       <Grid container spacing={4}>
         <Grid xs={8} item>
-          {(isPostsLoading ? [...Array(5)] : posts.items).map((obj, index) =>
-            isPostsLoading ? (
-              <Post key={index} isLoading={true} />
-            ) : (
+          {(isPostsLoading ? [...Array(5)] : filteredPosts).map(
+            (post, index) => (
               <Post
                 key={index}
-                id={obj._id}
-                title={obj.title}
-                imageUrl={ obj.imageUrl ? `http://localhost:4444/${obj.imageUrl}` : ''}
-                user={obj.user}
-                createdAt={obj.createdAt}
-                viewsCount={obj.viewsCount}
+                id={post._id}
+                title={post.title}
+                imageUrl={
+                  post.imageUrl ? `http://localhost:4444/${post.imageUrl}` : ''
+                }
+                user={post.user}
+                createdAt={post.createdAt}
+                viewsCount={post.viewsCount}
                 commentsCount={3}
-                tags={obj.tags}
-                isEditable={userData?._id === obj.user._id}
+                tags={post.tags}
+                isEditable={userData?._id === post.user._id}
               />
             )
           )}
