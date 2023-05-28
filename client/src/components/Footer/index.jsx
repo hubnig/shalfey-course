@@ -9,13 +9,13 @@ export const Footer = () => {
       <div className={styles.inner}>
       © 2023 Shalfey
       <ul>
-      <li><a href='#'>О нас</a></li>
+      <li><a href='/'>О нас</a></li>
         <li><a href='#'>Авторам</a></li>
         <li><a href='#'>Курсы</a></li>
       </ul>
       <ul>
-        <li><a href='#'><img src="vk.png"  alt="inst" width='25px'/></a></li>
-        <li><a href='#'><img src="tg.png" alt="inst" width='25px' /></a></li>
+        <li><a href='#'><img src="vk.png"  alt="vk" width='25px'/></a></li>
+        <li><a href='#'><img src="tg.png" alt="tg" width='25px' /></a></li>
         <li><a href='#'><img src="inst.png" alt="inst" width='25px' /></a></li>
       </ul>
       </div>

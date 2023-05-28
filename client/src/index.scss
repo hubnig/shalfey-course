@@ -23,10 +23,7 @@ html, body, #root{
 .react-quiz-container{
   margin: 0 auto;
 }
-.imgg{
-  width: 500px;
-  object-fit: cover;
-}
+
 .main{
   display: flex;
   flex-wrap: wrap;
@@ -70,4 +67,7 @@ li{
 .MuiTextField-root{
   width: 66%;
   margin-bottom: 15px !important;
+}
+iframe{
+  margin: 0 auto;
 }

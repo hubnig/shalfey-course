@@ -31,13 +31,15 @@ export const FullPost = () => {
     return <Post isLoading={isLoading} />
   }
 
-  if(data.title === "Программирование на React. Начало.") {
+  if (data.title === 'Программирование на React. Начало.') {
     return (
       <>
         <Post
           id={data._id}
           title={data.title}
-          imageUrl={data.imageUrl ? `http://localhost:4444/${data.imageUrl}` : ''}
+          imageUrl={
+            data.imageUrl ? `http://localhost:4444/${data.imageUrl}` : ''
+          }
           user={data.user}
           createdAt={data.createdAt}
           viewsCount={data.viewsCount}
@@ -47,11 +49,20 @@ export const FullPost = () => {
         >
           <ReactMarkdown children={data.text} />
         </Post>
-        <div className={styles.btnTest}> 
+        <div className={styles.btnTest}>
+          <iframe
+            width='560'
+            height='315'
+            src={'https://www.youtube.com/embed/AUbWwzez_Dg'}
+            title='Youtube Player'
+            frameborder='0'
+            allowFullScreen
+          />
           <Link to={`/test`}>
             <IconButton color='primary'>Пройти тест</IconButton>
           </Link>
         </div>
+
         <CommentsBlock
           items={[
             {
@@ -92,10 +103,10 @@ export const FullPost = () => {
       >
         <ReactMarkdown children={data.text} />
       </Post>
-      <div className={styles.btnTest}> 
-        <Link to={`/test1`}>
+      <div className={styles.btnTest}>
+        <a href='https://online.sberbank.ru/CSAFront/index.do'>
           <IconButton color='primary'>Купить курс</IconButton>
-        </Link>
+        </a>
       </div>
       <CommentsBlock
         items={[

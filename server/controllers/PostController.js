@@ -14,6 +14,19 @@ export const getLastTags = async (req, res) => {
     })
   }
 }
+export const getPostTag = async (req, res) => {
+  try {
+    const tag = req.params.tag
+    const posts = await PostModel.find({tags:tag}).populate('user')
+    res.json(posts)
+
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({
+      message: 'Не удалось создать пост'
+    })
+  }
+}
 
 export const create = async (req, res) => {
   try {

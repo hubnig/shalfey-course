@@ -35,6 +35,7 @@ app.post('/auth/register', registerValidation, handleValidationErrors, UserContr
 app.get('/auth/me', checkAuth, UserController.getMe)
 
 app.get('/tags', PostController.getLastTags)
+app.get('/tags/:tag', PostController.getPostTag)
 
 app.get('/posts', PostController.getAll)
 app.get('/posts/:id', PostController.getOne)

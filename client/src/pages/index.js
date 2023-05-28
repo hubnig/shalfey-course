@@ -5,4 +5,4 @@ export { Hello } from './Hello'
 export { Home } from './Home'
 export { Login } from './Login'
 export { Registration } from './Registration'
-
+export {Tags} from './Tags'

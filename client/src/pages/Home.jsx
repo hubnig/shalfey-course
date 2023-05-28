@@ -1,7 +1,5 @@
 import { TextField } from '@mui/material'
 import Grid from '@mui/material/Grid'
-import Tab from '@mui/material/Tab'
-import Tabs from '@mui/material/Tabs'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -17,6 +15,7 @@ export const Home = () => {
   const [searchQuery, setSearchQuery] = React.useState('')
   const isPostsLoading = posts.satus === 'loading'
   const isTagsLoading = tags.satus === 'loading'
+  
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value)
@@ -30,18 +29,11 @@ export const Home = () => {
 
   const filteredPosts = posts.items.filter((post) =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
+  //  && post.tags.includes('Программирование')
   )
 
   return (
     <>
-      {/* <Tabs
-        style={{ marginBottom: 15 }}
-        value={0}
-        aria-label='basic tabs example'
-      >
-        <Tab label='Новые' />
-        <Tab label='Популярные' />
-      </Tabs> */}
       <TextField
         id='standard-basic'
         label='Поиск курсов'
