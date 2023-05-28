@@ -6,7 +6,7 @@ export const Hello = () => {
   return (
     <div className='main'>
       <div className='Text'>
-        <h1>Шалфей образовательная платформа №1</h1>
+        <h1>Шалфей образовательная платформа!</h1>
         <p>Как говорил товарищ Ленин: "Учить, учиться и ещё раз учиться!"</p>
         <Link to='/home'>
           <Button variant='contained'>Начать учиться</Button>

@@ -22,7 +22,7 @@ export const Header = () => {
     <div className={styles.root}>
       <Container maxWidth='lg'>
         <div className={styles.inner}>
-          <Link className={styles.logo} to='/'>
+          <Link className={styles.logo} to='/home'>
             <div>shalfey curse</div>
           </Link>
           <div className={styles.buttons}>
