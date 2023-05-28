@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import { useDispatch} from 'react-redux'
 import { Header } from './components'
 import { Footer } from './components'
-import { AddPost, FullPost, Home, Login, Registration, HM } from './pages'
+import { AddPost, FullPost, Home, Login, Registration, HM, Hello } from './pages'
 import { fetchAuthMe} from './redux/slices/auth'
 
 function App() {
@@ -20,9 +20,10 @@ React.useEffect(() => {
       <Header />
       <Container maxWidth='lg'>
         <Routes>
-          <Route path='/' element={ <Home/> }/>
+          <Route path='/' element={ <Hello/> }/>
+          <Route path='/home' element={ <Home/> }/>
           <Route path='/test' element={ <HM/> }/>
-          <Route path='/test1' element={ <HM/> }/>
+          {/* <Route path='/test1' element={ <HM/> }/> */}
           <Route path='/posts/:id' element={ <FullPost/> }/>
           <Route path='/posts/:id/edit' element={ <AddPost/> }/>
           <Route path='/add-post' element={ <AddPost/> }/>

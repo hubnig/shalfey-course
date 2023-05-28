@@ -1,10 +1,60 @@
-body {
+html, body, #root{
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F5F5F5 !important;
 }
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .react-quiz-container{
   margin: 0 auto;
+}
+.imgg{
+  width: 500px;
+  object-fit: cover;
+}
+.main{
+  display: flex;
+  flex-wrap: wrap;
+}
+.Text{
+  width: 50%;
+  margin: auto;
+  h1{
+    font-size: 50px;
+  }
+  p{
+    font-size: 30px;
+    font-family: 'Roboto';
+  }
+  button{
+    font-size: 24px;
+  }
+}
+.imgLen{
+  width: 50%;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+.desc{
+  width: 100%;
+  p{
+    border-radius: 30px;
+    padding: 15px;
+    background-color: #73ad4e;
+    font-size: 24px;
+    font-family: 'Roboto';
+    margin: 0 auto;
+  }
 }
