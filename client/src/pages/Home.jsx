@@ -29,7 +29,6 @@ export const Home = () => {
 
   const filteredPosts = posts.items.filter((post) =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
-  //  && post.tags.includes('Программирование')
   )
 
   return (
