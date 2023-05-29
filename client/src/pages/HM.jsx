@@ -1,13 +1,23 @@
 import React from 'react'
 import Quiz from 'react-quiz-component'
-import styles from './FullPost.module.scss'
 
 export const HM = () => {
   const quiz = {
     quizTitle: 'Тест по React',
     quizSynopsis:
       'Здесь вы можете пройти тест с уровнем «Начальный» на тему React JS. На тест выделяется небольшой промежуток времени, а также после окончания теста вы сможете просмотреть результаты и ознакомиться с верными и неверными ответами.',
-    nrOfQuestions: '5',
+    nrOfQuestions: '6',
+    "appLocale": {
+      "landingHeaderText": "<questionLength> Вопросов",
+      "question": "Вопрос",
+      "startQuizBtn": "Начать тест",
+      "resultFilterAll": "Все",
+      "resultFilterCorrect": "Правильные",
+      "resultFilterIncorrect": "Неправильные",
+      "prevQuestionBtn": "Назад",
+      "nextQuestionBtn": "Вперёд",
+      "resultPageHeaderText": "Вы завершили тест. Вы првильно ответили на <correctIndexLength> из  <questionLength> возможных вопросов."
+    },
     questions: [
       {
         question:
@@ -22,20 +32,20 @@ export const HM = () => {
           'this.values'
         ],
         correctAnswer: '3',
-        messageForCorrectAnswer: 'Correct answer. Good job.',
-        messageForIncorrectAnswer: 'Incorrect answer. Please try again.',
+        messageForCorrectAnswer: 'Правильный ответ. Хорошая работа.',
+        messageForIncorrectAnswer: 'Неправильный ответ. Попробуйте ещё раз.',
         explanation:
           'Объект state описывает внутреннее состояние компонента, он похож на props за тем исключением, что состояние определяется внутри компонента и доступно только из компонента.',
         point: '20'
       },
       {
-        question: 'ReactJS разработан _____?',
+        question: 'ReactJS разработан ...?',
         questionType: 'text',
         answerSelectionType: 'single',
         answers: ['Google Engineers', 'Facebook Engineers'],
         correctAnswer: '2',
-        messageForCorrectAnswer: 'Correct answer. Good job.',
-        messageForIncorrectAnswer: 'Incorrect answer. Please try again.',
+        messageForCorrectAnswer: 'Правильный ответ. Хорошая работа.',
+        messageForIncorrectAnswer: 'Неправильный ответ. Попробуйте ещё раз.',
         explanation:
           'React (иногда React.js или ReactJS) — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций.',
         point: '20'
@@ -46,8 +56,8 @@ export const HM = () => {
         answerSelectionType: 'single',
         answers: ['Правда', 'Ложь'],
         correctAnswer: '1',
-        messageForCorrectAnswer: 'Correct answer. Good job.',
-        messageForIncorrectAnswer: 'Incorrect answer. Please try again.',
+        messageForCorrectAnswer: 'Правильный ответ. Хорошая работа.',
+        messageForIncorrectAnswer: 'Неправильный ответ. Попробуйте ещё раз.',
         explanation:
           'React - это полноценный MVC-фреймворк React предназначен для работы с "view" частью React является «контроллером» с точки зрения MVC.',
         point: '10'
@@ -62,8 +72,8 @@ export const HM = () => {
           'И то, и другое из вышеперечисленного'
         ],
         correctAnswer: '3',
-        messageForCorrectAnswer: 'Correct answer. Good job.',
-        messageForIncorrectAnswer: 'Incorrect answer. Please try again.',
+        messageForCorrectAnswer: 'Правильный ответ. Хорошая работа.',
+        messageForIncorrectAnswer: 'Неправильный ответ. Попробуйте ещё раз.',
         explanation:
           'Основополагающая концепция React.js – многоразовые компоненты. Разработчик создает небольшие части кода, которые можно объединять, чтобы сформировать более крупные или использовать их как самостоятельные элементы интерфейса.',
         point: '30'
@@ -79,27 +89,27 @@ export const HM = () => {
           'https://banner2.cleanpng.com/20180430/xiw/kisspng-vue-js-javascript-angularjs-front-and-back-ends-ty-5ae6b3d5944b41.1027055215250687576074.jpg'
         ],
         correctAnswer: '1',
-        messageForCorrectAnswer: 'Correct answer. Good job.',
-        messageForIncorrectAnswer: 'Incorrect answer. Please try again.',
+        messageForCorrectAnswer: 'Правильный ответ. Хорошая работа.',
+        messageForIncorrectAnswer: 'Неправильный ответ. Попробуйте ещё раз.',
         explanation:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          'Логотип React - это голубой атом вещества Ue на белом фоне',
         point: '20'
       },
       {
-        question: 'What are the advantages of React JS?',
+        question: 'В чем преимущества React JS?',
         questionType: 'text',
         answerSelectionType: 'multiple',
         answers: [
-          'React can be used on client and as well as server side too',
-          'Using React increases readability and makes maintainability easier. Component, Data patterns improves readability and thus makes it easier for manitaining larger apps',
-          'React components have lifecycle events that fall into State/Property Updates',
-          'React can be used with any other framework (Backbone.js, Angular.js) as it is only a view layer'
+          'React можно использовать как на стороне клиента, так и на стороне сервера',
+          'Использование React повышает удобочитаемость и упрощает обслуживание. Компонент, шаблоны данных улучшают читаемость и, таким образом, упрощают обслуживание более крупных приложений',
+          'Компоненты React имеют события жизненного цикла, которые попадают в обновления состояния/свойств',
+          'React можно использовать с любым другим фреймворком (Backbone.js , Angular.js ), поскольку это всего лишь слой просмотра'
         ],
         correctAnswer: [1, 2, 4],
-        messageForCorrectAnswer: 'Correct answer. Good job.',
-        messageForIncorrectAnswer: 'Incorrect answer. Please try again.',
+        messageForCorrectAnswer: 'Правильный ответ. Хорошая работа.',
+        messageForIncorrectAnswer: 'Неправильный ответ. Попробуйте ещё раз.',
         explanation:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          'React — это JavaScript-библиотека, а JavaScript — популярный язык программирования, который используется всюду. Ни одна другая JS-библиотека не работает в таком количестве окружений и на таком количестве устройств.',
         point: '20'
       }
     ]
