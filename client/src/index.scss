@@ -81,3 +81,13 @@ iframe {
     width: 50%;
   }
 }
+.css-vok43g-MuiGrid-root{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+.Post_root__obYEd:nth-child(4):nth-last-child(1) {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
+}
