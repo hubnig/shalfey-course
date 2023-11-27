@@ -3,6 +3,10 @@
   padding: 50px;
   border: 1px solid #dedede;
   margin: 50px auto;
+  p{
+    all:unset !important;
+    color: red !important;
+  }
 }
 
 .field {

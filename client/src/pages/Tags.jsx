@@ -26,7 +26,7 @@ export const Tags = () => {
     React.useEffect(() => {
       dispatch(fetchPosts())
       dispatch(fetchTags())
-    }, [])
+    })
   
     const filteredPosts = posts.items.filter((post) =>
         post.tags.includes(tag)

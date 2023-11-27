@@ -116,6 +116,5 @@ export const HM = () => {
   }
   return (
     <Quiz quiz={quiz} />
-    
   )
 }
