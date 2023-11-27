@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { fetchRegister, selectIsAuth } from '../redux/slices/auth'
 import styles from './Registration/Login.module.scss'
-import stylesHome from './Home.module.scss'
 
 export const Hello = () => {
 	const isAuth = useSelector(selectIsAuth)

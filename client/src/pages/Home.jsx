@@ -25,7 +25,7 @@ export const Home = () => {
   React.useEffect(() => {
     dispatch(fetchPosts())
     dispatch(fetchTags())
-  })
+  }, [])
 
   const filteredPosts = posts.items.filter((post) =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
